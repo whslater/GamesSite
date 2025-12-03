@@ -522,6 +522,27 @@
     filter: brightness(1.1);
   }
 
+  section{
+    z-index: 0;
+  }
+
+  .section-center:nth-child(2n+1){
+    background: var(--white);
+    z-index: 10;
+  }
+        
+  .section-center:nth-child(2n){
+    background: var(--black);
+    color: var(--white);
+    z-index: 10;
+  }
+
+
+/* Player window CSS */
+
+
+
+
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
@@ -756,9 +777,10 @@
       transform-style: preserve-3d;
       align-items: center;
       overflow: hidden;
-      z-index: -15;
   }
   .section-center{
+      background-color: var(--white);
+      z-index: 10;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -789,6 +811,7 @@
       background-size: cover;
       display: flex;
       flex-wrap: wrap;
+      z-index: 0;
   }
 
 

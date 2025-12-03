@@ -54,6 +54,7 @@
           </aside>
     </div>
   </nav>
+  
   <div class = "wrapper">
     <!-- LANDING SECTION -->
      <div class ="scroll-anchor" id="landing-scroll-anchor"></div>
@@ -61,9 +62,6 @@
           <div class="landing-header">
             <h1>SCHWENZ GAMES</h1>
             <p>One place for all the games I like</p>
-          </div>
-          <div class="external-links-nav">
-            
           </div>
     </section>
 
@@ -75,18 +73,18 @@
       </div>
     </section>
 
-        <!-- DS SECTION -->
-    <section class="section-center "id="ds">
-      <div class = "content-holder full-width-content">
-        <h2>DS</h2>
-        <div class="gameboy game-list"></div>
-      </div>
-    </section>
-
         <!-- GAMECUBE SECTION -->
     <section class="section-center "id="gc">
       <div class = "content-holder full-width-content">
         <h2>GAMECUBE</h2>
+        <div class="gameboy game-list"></div>
+      </div>
+    </section>
+
+        <!-- DS SECTION -->
+    <section class="section-center "id="ds">
+      <div class = "content-holder full-width-content">
+        <h2>DS</h2>
         <div class="gameboy game-list"></div>
       </div>
     </section>
@@ -109,70 +107,13 @@
 
   </div>
 
+  <div class = "player-window">
+    <button id="close-window"></button>
+  </div>
+
   <script>
     function scrollToSection(id) {
       document.getElementById(id).scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
-    }
-
-    window.onload = function() {
-      // Reset the form fields when the page loads
-      document.getElementById("form").reset();
-      const form = document.getElementById('form');
-      const result = document.getElementById('submit-result');
-      
-      //on submit, POST to web3Forms and get response
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        //If subject is empty, change to 
-        const subject = formData.get('subject');
-        const name = formData.get('name');
-        if(subject.toString().length === 0) {
-          subject = "New Email from ${name} via my site"
-        }
-        formData.append('subject', subject);
-
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        result.innerHTML = "Please wait..."
-        //fetch result
-        fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {//show response
-                let json = await response.json();
-                console.log(json);
-                if (response.status == 200) {
-                    result.innerHTML = json.message;
-                    result.classList.add("submit-success");
-                } else {
-                    console.log(response);
-                    result.innerHTML = json.message;
-                    result.classList.add("submit-warning");
-      
-                }
-            })
-            .catch(error => {//show error
-                console.log(error);
-                result.innerHTML = "Something went wrong!";
-                result.classList.add("submit-error");
-      
-            })
-            .then(function() {//reset form
-                form.reset();
-                //make response dissapear after 3 seconds if you wish
-                setTimeout(() => {
-                  result.classList.remove("submit-warning" ,"submit-success", "submit-error")
-                }, 15000);
-            });
-      });
-
     }
   </script>
 </body>
