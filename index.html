@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Billy Schwenzer | Digital Artist</title>
+  <link rel="shortcut icon" href="Assets/Images/Logo.JPG">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!--  Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQECDC7RGJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JQECDC7RGJ');
+</script> -->
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a onclick="scrollToSection('landing-scroll-anchor')"></a>
+      </div>        
+        <div class="nav-links mobile-hidden">
+            <a onclick="scrollToSection('me')">ABOUT ME</a>
+                    <!-- DROPDOWN MENU -->
+            <div class="dropdown">          
+              <a class="dropbtn">Links▾</a>
+              <div class="dropdown-content">
+                <a onclick="scrollToSection('td')">3D & Unity</a>
+                <a onclick="scrollToSection('gd')">Graphic Design</a>
+                <a onclick="scrollToSection('photography')">Photography</a>                             
+                <a onclick="scrollToSection('webdev')">Wed Development</a>
+              </div>
+            </div>              
+            <a onclick="scrollToSection('contact')">Contact</a>
+
+          </div>      
+          <label class="nav-links-dropdown-button mobile-show">
+            <input type="checkbox">
+          </label>
+          <aside class="sidebar mobile-hidden mobile-show">
+            <div><a onclick="scrollToSection('me')">About Me</a></div>    
+            <div><a onclick="scrollToSection('td')">3D & Unity</a></div>           
+            <div><a onclick="scrollToSection('gd')">Graphic Design</a></div>    
+            <div><a onclick="scrollToSection('photography')">Photography</a></div>    
+            <div><a onclick="scrollToSection('webdev')">Wed Development</a></div>    
+            <div><a onclick="scrollToSection('contact')">Contact</a></div>              
+            <div class="icon-link" id="artstation"><a href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer">ARTSTATION</a></div>
+            <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/schwenzerrr" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
+            
+          </aside>
+    </div>
+  </nav>
+  <div class = "wrapper">
+    <!-- LANDING SECTION -->
+     <div class ="scroll-anchor" id="landing-scroll-anchor"></div>
+    <section id="landing">         
+          <div class="landing-header">
+            <h1>BILLY SCHWENZER</h1>
+            <p>3D &amp; Digital Artist</p>
+          </div>
+          <div class="external-links-nav">
+            
+          </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-center "id="me">
+      <div class = "content-holder full-width-content">
+        <h2>About Me</h2>
+        <p>I am a graduate in 3D Game Design, with 4 years professional experience as a 3D Generalist working on <a id="dark-link" href="https://store.steampowered.com/app/2784330/EDYN" target="_blank" rel="noopener noreferrer">EDYN</a> with Galestorm Games/Genius Digital Labs</p>
+        <br>
+        <p>
+          during my time at Galestorm I worked on Character Props and Costmetics, Animating, Rigging, Lighting, VFX, Optimising, Technical Art and Documentation, Enviroment and Level Design and more!
+        </p>
+        <br>
+        <p>I have since began working freelance as a Digital Artist, creating various 3D and 2D still and motion graphics, Logos, Video Editing and Websites and Content.</p>
+        <div id="about-links">
+          <a id="about-link-artstation"></a>
+          <a id="about-link-fab"></a>
+          <a id="about-link-instagram"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D & Unity SECTION -->
+    <section class="section-center" id="td">
+      <div class="content-image mobile-hidden tdPhoto"></div>
+      <div class = "content-holder">
+        <h2>3D & UNITY</h2>
+        <p>
+        I have a 1st Hons. Bachelor of Arts in 3D Game Design from sheffield hallam university, 4 Years professional experience as a 3D Generalist in Games working in Blender and Unity and 10 years experience with Blender and Photshop.</p>
+        <br>
+        <div ><a id="tdartstation" href="https://www.artstation.com/billy_schwenzer" target="_blank" rel="noopener noreferrer"></a></div>
+        <br>
+        <p>
+        More info coming soon!
+        </p>
+        
+        
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
+    </section>
+
+    <!-- GD SECTION -->
+    <section class="section-center" id="gd">
+      <div class="content-image mobile-hidden gdPhoto"></div>
+      <div class = "content-holder">
+        <h2>Graphic Design</h2>
+        <p>
+        I do Graphic Design</p>
+        <p>
+          <a id="dark-link" href="https://schwenz.uk/DigitalDesign" target="_blank" rel="noopener noreferrer">Check my work out here!</a>
+        </p>
+        
+        
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
+    </section>
+
+    <!-- PHOTOGRAPHY SECTION -->
+    <section class="section-center" id="photography">
+      <div class="content-image mobile-hidden photographyPhoto"></div>
+      <div class = "content-holder">
+        <h2>Photography</h2>
+        <p>
+        I do Photography</p>
+        <p><a id="light-link" href="https://schwenz.uk/Photos">Check out my photography site here!</a>
+        </p>
+        
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
+    </section>
+
+    <!-- WD SECTION -->
+    <section class="section-center" id="webdev">
+      <div class = "content-holder full-width-content">
+        <h2>WEB DEVELOPMENT</h2>
+        <p>
+        I do Web Dev (I made this website). More info coming soon!
+        </p>
+        
+      </div>
+      <div class="artstation
+      <button class="btn to-top-button-dark" id="" onclick="scrollToSection('landing-scroll-anchor')"></button>      
+    </section>
+
+
+
+    <!-- <section class="section-center" id="news">
+      <div class = "content-holder">
+        <h2>News &amp Updates</h2>
+        <p>
+        Find out what I've been upto.
+        </p>
+      </div>
+      <button class="btn to-top-button-light" id="" onclick="scrollToSection('landing-logo')"></button>
+    </section> -->
+
+    <section class="section-center" id="contact">
+
+      <div class="contact-container full-width-content">
+        <h1>Contact Me</h1>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <!-- Public Access Key -->
+          <input type="hidden" name="access_key" value="c01cf6ab-0a74-4f8c-b2c7-24c6d81188ad">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="NAME (REQUIRED)" required autocomplete="on">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="EMAIL (REQUIRED)" required autocomplete="on">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="SUBJECT" />          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="YOUR MESSAGE TO ME" required></textarea>
+
+          <input id="form-submit-button" type="submit">
+        </form>
+        <div id="submit-result" class="">
+          <p>PLACEHOLDER</p>
+        </div>
+      </div>
+      
+      
+    </section>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+
+    window.onload = function() {
+      // Reset the form fields when the page loads
+      document.getElementById("form").reset();
+      const form = document.getElementById('form');
+      const result = document.getElementById('submit-result');
+      
+      //on submit, POST to web3Forms and get response
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        //If subject is empty, change to 
+        const subject = formData.get('subject');
+        const name = formData.get('name');
+        if(subject.toString().length === 0) {
+          subject = "New Email from ${name} via my site"
+        }
+        formData.append('subject', subject);
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+        //fetch result
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {//show response
+                let json = await response.json();
+                console.log(json);
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                    result.classList.add("submit-success");
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.add("submit-warning");
+      
+                }
+            })
+            .catch(error => {//show error
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.classList.add("submit-error");
+      
+            })
+            .then(function() {//reset form
+                form.reset();
+                //make response dissapear after 3 seconds if you wish
+                setTimeout(() => {
+                  result.classList.remove("submit-warning" ,"submit-success", "submit-error")
+                }, 15000);
+            });
+      });
+
+    }
+  </script>
+</body>
+</html>
