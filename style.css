@@ -45,6 +45,7 @@
   }
 
   .wrapper{
+    width: 100%;
     position: fixed;
     perspective: 100px;
     transform-style: preserve-3d;
