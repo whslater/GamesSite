@@ -528,6 +528,7 @@
 
   .section-center:nth-child(2n+1){
     background: var(--white);
+    color: var(--black);
     z-index: 10;
   }
         
@@ -537,6 +538,11 @@
     z-index: 10;
   }
 
+/* Game css */
+
+.ds-game{
+  max-width: 300px;
+}
 
 /* Player window CSS */
 
